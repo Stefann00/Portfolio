@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+	Template version v1.0
+	Made by Stefan
+
+-->
+
+<html lang="en">
+<head>
+<!-- Meta Tags -->
+<meta charset="utf-8">
+
+<!-- Title-->
+<title>Contacteaza ma!</title>
+
+<!--Website Icon-->
+<link rel="icon" href="images/favicon.png">
+
+<!-- Metas pentru telefon -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<!-- CSS & Javascript-->
+ <link rel="stylesheet" href="./css/style.css"/>
+ <link rel="stylesheet" href="./css/contact.css"/>
+ <script src="js/main.js"></script>
+</head>
+
+<body>
+<div id="player">
+    <audio autoplay hidden>
+     <source src="music.mp3" type="audio/mpeg">
+                If you're reading this, audio isn't supported. 
+    </audio>
+</div>
+<!-- Preloader -->
+<div id="preloader">
+</div>
+<!-- Preloader end-->
+
+<!--Header-->
+<div class="container">
+	<nav>
+		<img src="images/menu-icon.png" class="menu-img" style="padding-top:5%;">
+		<ul style="padding-top:5%;">
+			<li><a href="index.html">Despre mine</a></li>
+			<li>/</li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="contact">
+	<h3>Trimite un mesaj!</h3>
+	<form action="contact.php" name="contact_form">
+		<label for="first_name">Prenume</label>
+		<input name="first_name" type="text" required placeholder="John"/>
+		<br>
+		<label for="last_name">Nume</label>
+		<input name="last_name" type="text" required placeholder="Doe"/>
+		<br>
+		<label for="email">Email</label>
+		<input name="email" type="email" required placeholder="E-mailul tau"/>
+		<br>
+		<label for="message">Mesaj</label><br>
+		<textarea name="message" cols="30" rows="10" placeholder="Scrie mesajul tau aici" required> </textarea>
+		<div class="center">
+			<input type="submit" value="Trimite">
+		</div>
+	</form>	
+</div>
+
+</div> <!-- End of header -->
+
+
+<script>
+var preloader=document.getElementById("preloader");
+window.addEventListener("load", function() {
+	preloader.style.display="none";
+})
+</script>
+
+
+</body>
+</html>

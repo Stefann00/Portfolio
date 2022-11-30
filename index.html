@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--
+	Template version v1.0
+	Made by Stefan
+
+-->
+
+<html lang="en">
+<head>
+<!-- Meta Tags -->
+<meta charset="utf-8">
+
+<!-- Title-->
+<title>Portofoliu</title>
+
+<!--Website Icon-->
+<link rel="icon" href="images/favicon.png">
+
+<!-- Metas pentru telefon -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<!-- CSS & Javascript-->
+ <link rel="stylesheet" href="./css/style.css"/>
+ <script src="js/main.js"></script>
+</head>
+
+<body>
+<div id="player">
+    <audio autoplay hidden>
+     <source src="music.mp3" type="audio/mpeg">
+                If you're reading this, audio isn't supported. 
+    </audio>
+</div>
+<!-- Preloader -->
+<div id="preloader">
+</div>
+<!-- Preloader end-->
+
+<!--Header-->
+<div class="container">
+	<nav id="dynamicNav">
+		<img src="images/menu-icon.png" class="menu-img" id="stai" onclick="toggleNav()">
+		<a href="index.html"><img src="images/logo.png" class="logo"></a>
+		<ul>
+			<li><a href="#aboutme">Despre mine</a></li>
+			<li><a href="#proiecte">Proiecte</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+
+		
+	</nav>
+<!-- Imagina lampa -->
+<div class="lamp-container"> 
+			<img src="images/lamp.png" class="lamp">
+			<img src="images/light.png" class="light" id="light">
+
+</div>
+
+<div class="pt-mine" id="mine">
+<p>EU SUNT</p>
+<h1>STEFAN</h1>
+<a href="#aboutme">CUNOASTE MA!</a>
+</div>
+
+<div class="text-container"> 
+	<h1>Welcome to my Website!</h1>
+	<p>Don't stay in the dark and turn on the lights!</p>
+</div>
+
+
+
+</div> <!-- End of header -->
+<div class="proiecte" id="proiecte">
+
+	<div class="card"> <!-- Card nr. 1-->
+		<div class="circle">
+			<span class="imagina"><img src="images/role-model.png"></img></span>
+			<h2>BDE - Sistem de parcare</h2>
+		</div>
+		<div class="continut">
+		<p>O baza de date pentru un sistem de parcare. 
+		<ul><strong>Elemente continute:</strong>
+		<li>Localitate;</li>
+		<li>Tabela de parcari - INDEX numeric;</li>
+		<li>Zona de parcare - INDEX alfabetic;</li>
+		<li>Clienti — abonament lunar;</li>
+		<li>Bilete de parcare;
+
+		</ul>
+		</p>
+		<a href="https://drive.google.com/file/d/1HcN0bUkKiJvsgNFNGN0vMLr4d314mWeu/view?usp=sharing">Acceseaza proiectul — DEMO</a>
+		</div>
+	</div>
+
+	<div class="card"> <!-- Card nr. 2-->
+		<div class="circle">
+			<span class="imagina"><img src="images/advice.png"></img></span>
+			<h2>Nume proiect 2</h2>
+		</div>
+		<div class="continut">
+		<p>Aici descriu proiectul</p>
+		<a href="#">Acceseaza proiectul — DEMO</a>
+		</div>
+	</div>
+
+
+	<div class="card"> <!-- Card nr. 3-->
+		<div class="circle">
+			<span class="imagina"><img src="images/brainstorm.png"></img></span>
+			<h2>Nume proiect 3</h2>
+		</div>
+		<div class="continut">
+		<p>Aici descriu proiectul</p>
+		<a href="#">Acceseaza proiectul — DEMO</a>
+		</div>
+	</div>
+</div>
+<div class="aboutme" id="aboutme">
+	<div class="aboutme-inside">
+		<h2>Numele meu este Stefan</h2>
+		<p>Vin din Macedonia, Bitola si am 21 de ani. In momentul sunt un student la FSEGA, anul 3, departamentul IE.</p>
+	</div>
+
+	<div class="imagina">
+		<img src="images/aboutme.png"></img>
+	</div>
+
+</div>
+
+
+<div class="messageme">
+	<div class="continut">
+		<h2>Dacă iți plac proiectele mele, eu te pot ajuta!</h2>
+		<p>Dacă ai un proiect în minte, care vrei să o realizezi și
+		crezi ca te pot ajuta, atunci</p>
+		<a href="contact.html"><button type="button" id="button1">Scrie-mi un mesaj!</button></a>
+	</div>
+</div>
+<div class="footer">
+	<ul>
+			<li><a href="">About Me</a></li>
+			<li><a href="">Projects</a></li>
+			<li><a href="">Contact</a></li>
+	</ul>
+	<div class="social-media">
+	<a href="#"><img src="images/twitter.png"></img></a>
+	<a href="#"><img src="images/instagram.png"></img></a>
+	<a href="#"><img src="images/email.png"></img></a>
+	<a href="#"><img src="images/linkedin.png"></img></a>
+	</div>
+<span class="footer-mesaj"><p>All rights reserved 2021. By Stefan</p></span>
+</div>
+<script>
+var preloader=document.getElementById("preloader");
+window.addEventListener("load", function() {
+	preloader.style.display="none";
+})
+
+var btn=document.getElementById("btn");
+var light=document.getElementById("light");
+var text=document.getElementById("mine");
+var nav=document.getElementById("dynamicNav"); 
+var img=document.getElementById("stai");
+
+
+function toggleBtn() {
+btn.classList.toggle("active");
+light.classList.toggle("on");
+text.classList.toggle("display");
+}
+
+function toggleNav() {
+nav.classList.toggle("hide");
+img.style.translateY="120px";
+
+
+}
+
+
+</script>
+</body>
+</html>
